@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,43 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* .col {
+  padding-left: 70px;
+  padding-top: 20px;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+
+.input-line{
+  width: 125px;
+}
+
+.change-button{
+  margin-left: 10px;
+} */
+
+/* .input-block{
+   padding-top: 10px;
+   margin-left: 10px;
+} */
+
+
+.button-edit{
+  margin-left: 20;
+  height: 56px;
+}
+
+.btn-cancel{
+  height: 56px;
+}
+
+#form-input{
+  position: relative;
 }
