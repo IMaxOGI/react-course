@@ -136,4 +136,4 @@ class ProductTable extends Component {
   }
 }
 
-export default withStyles()(ProductTable);
+export default withStyles({})(ProductTable);

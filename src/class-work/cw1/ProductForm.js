@@ -146,4 +146,4 @@ class ProductForm extends React.Component {
   }
 }
 
-export default withStyles()(ProductForm);
+export default withStyles({})(ProductForm);
