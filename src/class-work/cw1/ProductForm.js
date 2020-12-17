@@ -1,15 +1,15 @@
 import React from "react";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import { TextField, Button } from "@material-ui/core";
 
 class ProductForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productName: props.product?.name,
-      productCategory: props.product?.category,
-      productPrice: props.product?.price,
-      productRemainder: props.product?.remainder,
+      productName: props.product?.name || "",
+      productCategory: props.product?.category || "",
+      productPrice: props.product?.price || "",
+      productRemainder: props.product?.remainder || "",
     };
   }
 
@@ -46,28 +46,19 @@ class ProductForm extends React.Component {
     });
   };
 
-  useStyles = makeStyles((theme) => ({
-    root: {
-      "& > *": {
-        margin: theme.spacing(1),
-        width: "25ch",
-      },
-    },
-  }));
-
   submitProduct = () => {
     const { product } = this.props;
     const {
-      productName: name,
-      productCategory: category,
-      productPrice: price,
-      productRemainder: remainder,
+      productName,
+      productCategory,
+      productPrice,
+      productRemainder,
     } = this.state;
     const newProduct = {
-      name,
-      category,
-      price,
-      remainder,
+      name: productName,
+      category: productCategory,
+      price: productPrice,
+      remainder: productRemainder,
       id: product ? product.id : Date.now(),
     };
     if (

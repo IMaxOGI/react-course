@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ProductRow from "./ProductRow";
 import ProductForm from "./ProductForm";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import {
   Paper,
   TableRow,
@@ -94,22 +94,11 @@ class ProductTable extends Component {
     });
   };
 
-  useStyles = makeStyles({
-    table: {
-      minWidth: 650,
-    },
-  });
-
   render() {
     const { products } = this.state;
-    const { classes } = this.props;
     return (
       <TableContainer component={Paper}>
-        <Table
-          className={classes.table}
-          size="small"
-          aria-label="a dense table"
-        >
+        <Table size="small" aria-label="a dense table">
           <TableHead>
             <TableRow>
               <TableCell>Название</TableCell>
@@ -126,7 +115,7 @@ class ProductTable extends Component {
                 key={product.id}
                 onRemoveProduct={this.removeProduct}
                 onEditProduct={this.editProduct}
-              ></ProductRow>
+              />
             ))}
           </TableBody>
         </Table>
