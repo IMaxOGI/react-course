@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
-import ProductTable from "./class-work/cw1/ProductTable";
+import Blog from "./class-work/cw2/Blog";
+import "semantic-ui-css/semantic.min.css";
 
 class App extends React.Component {
   render() {
-    return <div className="app">{<ProductTable />}</div>;
+    return <div className="app">{<Blog />}</div>;
   }
 }
 
